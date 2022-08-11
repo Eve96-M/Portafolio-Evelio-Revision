@@ -1,0 +1,645 @@
+/*Ajustes generales*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*Tipografias*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); /*font-family: 'Inter', sans-serif;*/
+
+/*Colores*/
+:root{
+    --ivory:#FEF2F2;
+    --orange:#F26440;
+    --Aquamarine:#286F6C;
+    --dark-grey:#ADADAD;
+    --white:#FFFFFF;
+    --light-grey:#F9F5F2;
+}
+
+
+/*Mobile*/
+
+body{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+/*barra de navegacion*/
+.header{
+    min-height: 485px;
+    background-color: #FEF2F2;
+}
+
+.barra-navegacion{
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--light-grey);
+
+}
+/*activador boton*/
+#activador{
+    display:none;
+}
+
+/*menu navegacion*/
+
+.menu-nav{
+    list-style: none;
+    text-decoration: none;
+    position: absolute;
+    text-align: center;
+    padding:1rem;
+    top:65px;
+    left: 100%;
+    opacity: 0;
+    width:calc(100% - 3rem);
+    transition: all .5s linear;
+    z-index: 30;
+}
+
+.nav-menu-item{
+    padding: 0.5rem;
+    background-color: var(--white);
+    font-size: 14px;
+    color:#286F6C;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color:#286F6C;
+
+}
+
+a:hover{
+    border-bottom: 1px solid var(--orange);
+}
+
+/*funcionalidad boton*/
+#activador:checked ~ .menu-nav{
+    left: 1.5rem;
+    opacity:1;
+} 
+
+/*header presentacion*/
+
+.main-data{
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    font-size: 50px;
+    font-weight:700;
+    width:100%;
+    max-width: 300px;
+    height:120px;
+    margin-top: 2rem;
+    margin-right: 0;
+}
+.contenedor-imagen{
+    display: block;
+    height: 100%;
+    width:60%;
+    display:relative;
+}
+
+.contenedor-data{
+    display:flex;
+    height: 100%;
+    position:relative;
+}
+
+.imagen-estudiante{
+    position:relative;
+    width:100%;
+    height:100%;
+    z-index: 5;
+}
+
+.circulo-deco{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    background-color: #286F6C;
+    border-radius: 50%;
+    height: 12rem;
+    width: 12rem;
+    bottom:20rem;
+    left:3rem;
+}
+
+.contenedor-circulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    right:20px;
+    width: 80px;
+    margin-right: 1rem 0;
+}
+
+.contenedor-circulos-desktop{
+    display:none;
+    
+}
+
+.circulo{
+    display:flex;
+    background-color: var(--orange);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin:0 1rem 2rem 1rem;
+}
+
+.circulo > img{
+    height: 30px;
+    width: 30px;
+    filter:brightness(100)
+}
+
+/*main acerca de mi*/
+
+.acerca-de-mi{
+    background-color:var(--white);
+    width:100%;
+    height:340px;
+}
+
+.acerca-sub{
+font-size: 32px;
+font-weight: 700;
+padding: 1.5rem 0.5rem 1rem 1rem;
+color:#286F6C
+}
+
+.acerca-p{
+    padding: 0.5rem 1rem 1rem 1rem;
+    color:var(--dark-grey);
+    font-size: 20px;
+}
+
+/*Seccion mis habilidades*/
+
+.mis-habilidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caja{
+    height:160px;
+    width:180px;
+    background-color: var(--ivory);
+    position:relative;
+    bottom:4rem;
+    margin:0.5rem;
+    padding:0.5rem;
+    overflow: hidden;
+}
+
+.caja-imagen{
+    display:inline-block;
+    height:24px;
+    width:24px;
+    position: relative;
+    top: 0.2rem;
+}
+
+.caja h3{
+    margin-bottom: 1rem;
+    margin-left: 0.2rem;
+    display: inline-block;
+}
+.hab-titulo{
+    align-self: flex-start;
+    position:relative;
+    z-index: 5;
+    font-size: 32px;
+    font-weight: 700;
+    color:#286F6C;
+    margin: 1rem;
+    bottom:5rem;
+}
+.parrafo-habilidades{
+    color:var(--dark-grey);
+
+}
+.hab-titulo span{
+    color:var(--white);
+}
+
+.circulo-deco2{
+    background-color: #286F6C;
+    border-radius: 50%;
+    display: flex;
+    position:relative;
+    align-self:flex-start;
+    z-index: 1;
+    height: 120px ;
+    width: 120px ;
+    top:2rem;
+    right:3rem;
+}
+
+.circulo-deco3{
+    background-color: var(--orange);
+    border-radius: 50%;
+    position:relative;
+    align-self:flex-start;
+    z-index: 1;
+    height: 60px ;
+    width: 60px ;
+    top:5rem;
+    left:4rem;
+}
+
+/*Seccion portafolio*/
+
+.portafolio{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background-color: #286F6C;
+}
+
+.carta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position:relative;
+    width: 350px;
+    height: 280px;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    background-color: var(--white);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.info-portafolio{
+    margin:1rem;
+    color:var(--white);
+}
+
+.titulo-portafolio{
+    align-self: flex-start;
+    margin: 1rem 0rem;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.carta > img{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 1rem;
+}
+
+.carta1{
+    top:1rem;
+}
+.carta2{
+    top:3rem;
+}
+
+/*Footer contacto*/
+
+.pie-pagina{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height:500px;
+}
+.titulo-footer{
+    display:flex;
+    align-self: flex-start;
+    position: relative;
+    z-index:5;
+    margin: 0.5rem 1rem;
+    font-size: 32px;
+    font-weight: 700;
+    color:#286F6C;
+    right:16rem;
+    top:8rem;
+}
+.contenedor-datos{
+    display:flex;
+    flex-direction: row;
+}
+.contenedor-datos-contacto{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    margin:0.5rem 1.5rem;
+    height: 150px;
+    width: 150px;
+    bottom:7rem;
+}
+
+.imagen-contenedor{
+    background-color: #F26440;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 80px;
+    width:80px;
+}
+
+
+
+.contenedor-datos-contacto img{
+    height: 50px;
+    width: 50px;
+    filter:brightness(5)
+}
+
+.contenedor-datos-contacto h4{
+    margin:0.4rem;
+}
+
+.contenedor-datos-contacto h6{
+    font-size: 11px;
+    color:var(--dark-grey)
+}
+
+
+
+.titulo-footer::before{
+    content:'';
+    background-color: #286F6C;
+    border-radius: 50%;
+    position: relative;
+    height:17rem;
+    width:17rem;
+    top:2rem;
+    left:5rem;
+    opacity:0.2;
+}
+
+/*desktop*/
+
+@media screen and (min-width:760px) {
+    
+    /*Ajustes generales*/
+
+    body{
+        font-size: 18px;
+    }
+    /*header*/
+
+    .menu-nav{
+        left: 0;
+        top:0;
+        transition: none;
+        opacity:1;
+        text-align: end;
+    }
+
+    .nav-menu-item{
+        display: inline-block;
+        background-color: transparent;
+        border-bottom: transparent;
+        font-size: 24px;
+    }
+
+    .boton{
+        display: none;
+    }
+    /*info header*/
+
+    .main-data{
+        height:600px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+}
+
+    .title{
+        align-self: flex-start;
+        font-size: 80px;
+        margin: 3rem 3rem 3rem 3rem;
+}
+
+    .contenedor-imagen{
+        height:100%;
+        width:400px;
+        margin-left: 3rem;
+    }
+
+    .imagen-estudiante{
+        width:100%
+}
+
+    .contenedor-data{
+        width: 900px;
+}
+    .contenedor-circulos{
+        display:none;
+}
+
+    .contenedor-data2{
+        margin-left: 8rem;
+        margin-top: 9rem;
+        height:100%;
+        position: relative;
+        bottom:4rem;
+        left:5rem;
+    }
+
+    .contenedor-circulos-desktop{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position:relative;
+        width: 350px;
+        height: 150px;
+        top:5rem;
+        left:2.5rem;
+    }
+    .contenedor-circulos-desktop .circulo{
+        margin:0 2rem;
+        height: 65px;
+        width: 65px;
+    }
+    
+    .circulo-deco{
+        height:30rem;
+        width:30rem;
+        bottom:35rem;
+        left:10rem;
+    }
+
+    /*acerca de mi*/
+
+    .acerca-sub{
+        font-size:40px;
+        margin:0 15rem;
+    }
+
+    .acerca-p{
+        margin:0 15rem;
+        font-size:24px;
+    }
+
+    /* Mis habilidades*/
+
+    .mis-habilidades{
+        height:700px;
+    }
+
+    .hab-titulo{
+        flex-direction: column;
+        margin-left: 15rem;
+        font-size: 40px;
+        position: relative;
+        bottom:15rem;
+    }
+    
+    .contenedor-habilidades{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        bottom:14rem;
+        left: 8rem;;
+    }
+
+    .caja{
+        height:270px;
+        width:210px;
+        bottom: 0;
+        margin: 0 2rem;
+    }
+
+    .caja-imagen{
+        height:24px;
+        width:24px;
+    }
+    
+    .circulo-deco2{
+        height:300px;
+        width:300px;
+        top:0;
+        left:1rem;
+    }
+
+    .circulo-deco3{
+        height:150px;
+        width:150px;
+        left:12rem;
+        top:14rem;
+    }
+
+    /*Mi portafolio*/
+
+    .portafolio{
+        height: 700px;
+    }
+
+    .info-portafolio{
+        margin-left: 40rem;
+        position:relative;
+        bottom:10rem;
+    }
+    .carta{
+        height: 500px;
+        width:400px;
+
+    }
+    .carta > img{
+        border-radius: 0;
+    }
+    .carta1{
+        top:6rem;
+        right:24rem;
+    }
+
+    .carta2{
+        left:24rem;
+        top:0rem;
+    }
+    .titulo-portafolio{
+        font-size: 40px;
+    }
+
+    .info-portafolio p{
+        font-size: 24px;
+    }
+
+    .titulo-carta{
+        margin:2rem 1rem;
+        align-self: flex-start;
+    }
+
+    /*footer*/
+
+    .titulo-footer{
+        margin-left: 4rem;
+        margin-top: 12rem;
+        font-size: 40px;
+    }
+
+    .contenedor-datos{
+        height:250px;
+    }
+
+    .imagen-contenedor{
+        height:90px;
+        width:90px;
+    }
+
+    .imagen-contenedor >img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .contenedor-datos-contacto{
+        margin:3rem 5rem;
+        height:200px;
+        width:200px;
+        bottom: 10rem;
+    }
+
+    .contenedor-datos-contacto h4{
+        font-size:24px;
+    }
+
+    .contenedor-datos-contacto h6{
+        font-size:24px;
+    }
+
+    .titulo-footer::before{
+        content:'';
+        background-color: #286F6C;
+        border-radius: 50%;
+        position: relative;
+        height:20rem;
+        width:20rem;
+        top:3rem;
+        right:13rem;
+        opacity:0.2;
+    }
+}
