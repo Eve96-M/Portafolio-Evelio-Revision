@@ -30,7 +30,7 @@ body{
 /*barra de navegacion*/
 .header{
     min-height: 485px;
-    background-color: #FEF2F2;
+    background-color: var(--ivory);
 }
 
 .barra-navegacion{
@@ -47,6 +47,12 @@ body{
     display:none;
 }
 
+.boton{
+    margin-left: 90%;
+    position: relative;
+    z-index:10;
+}
+
 /*menu navegacion*/
 
 .menu-nav{
@@ -55,12 +61,11 @@ body{
     position: absolute;
     text-align: center;
     padding:1rem;
-    top:65px;
-    left: 100%;
-    opacity: 0;
+    opacity: 1;
+    bottom: 100%;
     width:calc(100% - 3rem);
     transition: all .5s linear;
-    z-index: 30;
+    z-index: 1000;
 }
 
 .nav-menu-item{
@@ -74,7 +79,6 @@ body{
 a{
     text-decoration: none;
     color:#286F6C;
-
 }
 
 a:hover{
@@ -83,8 +87,8 @@ a:hover{
 
 /*funcionalidad boton*/
 #activador:checked ~ .menu-nav{
-    left: 1.5rem;
     opacity:1;
+    bottom: calc(100% - 16rem);
 } 
 
 /*header presentacion*/
@@ -200,7 +204,7 @@ color:#286F6C
 }
 
 .caja{
-    height:160px;
+    height:190px;
     width:180px;
     background-color: var(--ivory);
     position:relative;
@@ -334,16 +338,17 @@ color:#286F6C
     align-self: flex-start;
     position: relative;
     z-index:5;
-    margin: 0.5rem 1rem;
     font-size: 32px;
     font-weight: 700;
     color:#286F6C;
-    right:16rem;
-    top:8rem;
+    top:10rem;
+    left:1rem;
 }
 .contenedor-datos{
     display:flex;
     flex-direction: row;
+    position: relative;
+    top:10rem;
 }
 .contenedor-datos-contacto{
     display:flex;
@@ -351,12 +356,10 @@ color:#286F6C
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
     z-index: 5;
-    margin:0.5rem 1.5rem;
+    margin:0.5rem;
     height: 150px;
     width: 150px;
-    bottom:7rem;
 }
 
 .imagen-contenedor{
@@ -368,8 +371,6 @@ color:#286F6C
     height: 80px;
     width:80px;
 }
-
-
 
 .contenedor-datos-contacto img{
     height: 50px;
@@ -387,22 +388,20 @@ color:#286F6C
 }
 
 
-
-.titulo-footer::before{
-    content:'';
+.circulo-deco4{
     background-color: #286F6C;
     border-radius: 50%;
     position: relative;
+    right:13rem;
+    bottom:1rem;
     height:17rem;
     width:17rem;
-    top:2rem;
-    left:5rem;
     opacity:0.2;
 }
 
 /*desktop*/
 
-@media screen and (min-width:760px) {
+@media screen and (min-width:1024px) {
     
     /*Ajustes generales*/
 
@@ -415,6 +414,7 @@ color:#286F6C
         left: 0;
         top:0;
         transition: none;
+        width:calc(100% - 3rem);
         opacity:1;
         text-align: end;
     }
@@ -523,6 +523,7 @@ color:#286F6C
         display: flex;
         flex-direction: row;
         position: relative;
+        margin-left: 7.5rem;
         bottom:14rem;
         left: 8rem;;
     }
@@ -531,7 +532,7 @@ color:#286F6C
         height:270px;
         width:210px;
         bottom: 0;
-        margin: 0 2rem;
+        margin: 0 0.5rem;
     }
 
     .caja-imagen{
@@ -596,14 +597,21 @@ color:#286F6C
 
     /*footer*/
 
+
+    .pie-pagina{
+        height:700px;
+
+    }
     .titulo-footer{
         margin-left: 4rem;
-        margin-top: 12rem;
+        top:5rem;
+        left:10rem;
         font-size: 40px;
     }
 
     .contenedor-datos{
         height:250px;
+        top:6rem;
     }
 
     .imagen-contenedor{
@@ -620,7 +628,6 @@ color:#286F6C
         margin:3rem 5rem;
         height:200px;
         width:200px;
-        bottom: 10rem;
     }
 
     .contenedor-datos-contacto h4{
@@ -631,15 +638,11 @@ color:#286F6C
         font-size:24px;
     }
 
-    .titulo-footer::before{
-        content:'';
-        background-color: #286F6C;
-        border-radius: 50%;
-        position: relative;
-        height:20rem;
-        width:20rem;
-        top:3rem;
-        right:13rem;
-        opacity:0.2;
+    .circulo-deco4{
+        height:25rem;
+        width:25rem;
+        right:40rem;
+        bottom:8rem;
+
     }
 }
